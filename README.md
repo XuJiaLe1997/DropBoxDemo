@@ -8,6 +8,7 @@
     <img src="img/演示1.gif" alt="Sample"  width="200" height="400"/>
     <img src="img/演示2.gif" alt="Sample"  width="200" height="400"/>
 </p>
+
 第一张效果图展示了从StoryBoard直接拖拽`TextField`、通过代码添加`TextField`和结合菜单键实现菜单的三种效果。
 
 第二张效果图来源于我们开源的一个课程作业项目，我们应用下拉框来实现账号列表的功能，有兴趣的同学可以到 (github.com/XuJiaLe1997/BookShopIOS)[https://github.com/XuJiaLe1997/BookShopIOS] 这个仓库参考一下，可以直接运行，不需要服务器。
