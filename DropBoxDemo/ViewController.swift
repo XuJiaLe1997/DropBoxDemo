@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, DropBoxDelegate {
     
-    var strs: [String] = ["第一个item", "第二个item", "第三个item", "第四个item","第五个item","第六个item","第七个item"]
+    var strs: [String] = ["第一个item", "第二个item", "第三个item"]
     
     @IBOutlet weak var textField: UITextField!  // 从StoryBoard拖拽的文本框
     var textField2: UITextField!    // 代码创建的文本框
@@ -65,10 +65,10 @@ class ViewController: UIViewController, DropBoxDelegate {
     }
     
     func setMenu() {
-        let rightTop = CGRect(x: self.view.frame.width - 205,
+        let rightTop = CGRect(x: self.view.frame.width - 155,
                               y: (self.navigationController?.navigationBar.frame.height)! + 50,
-                              width: 200, height: 0)
-        dropBoxMenu = DropBoxView(frame: rightTop, delegate: self)
+                              width: 150, height: 0)
+        dropBoxMenu = DropBoxMenu(frame: rightTop, delegate: self)
         self.view.addSubview(dropBoxMenu)
     }
     

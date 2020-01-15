@@ -14,6 +14,7 @@
 		A2688CA523CAD98200D1C4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2688CA323CAD98200D1C4E0 /* LaunchScreen.storyboard */; };
 		A2688CAD23CAD9CC00D1C4E0 /* DropBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2688CAC23CAD9CC00D1C4E0 /* DropBox.swift */; };
 		A2688CAF23CB26B900D1C4E0 /* DropBoxTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2688CAE23CB26B900D1C4E0 /* DropBoxTextField.swift */; };
+		A2F98C6923CF6C6E0061BED4 /* DropBoxMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F98C6823CF6C6E0061BED4 /* DropBoxMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A2688CA623CAD98200D1C4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2688CAC23CAD9CC00D1C4E0 /* DropBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBox.swift; sourceTree = "<group>"; };
 		A2688CAE23CB26B900D1C4E0 /* DropBoxTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxTextField.swift; sourceTree = "<group>"; };
+		A2F98C6823CF6C6E0061BED4 /* DropBoxMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBoxMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		A2688C9923CAD98100D1C4E0 /* DropBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A2F98C6823CF6C6E0061BED4 /* DropBoxMenu.swift */,
 				A2688CAC23CAD9CC00D1C4E0 /* DropBox.swift */,
 				A2688CAE23CB26B900D1C4E0 /* DropBoxTextField.swift */,
 				A2688C9A23CAD98100D1C4E0 /* AppDelegate.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				A2688CAF23CB26B900D1C4E0 /* DropBoxTextField.swift in Sources */,
 				A2688CAD23CAD9CC00D1C4E0 /* DropBox.swift in Sources */,
+				A2F98C6923CF6C6E0061BED4 /* DropBoxMenu.swift in Sources */,
 				A2688C9D23CAD98100D1C4E0 /* ViewController.swift in Sources */,
 				A2688C9B23CAD98100D1C4E0 /* AppDelegate.swift in Sources */,
 			);
