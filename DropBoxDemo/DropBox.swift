@@ -18,7 +18,7 @@ protocol DropBoxDelegate: NSObjectProtocol {
     // 个数
     func count() -> Int
     // 选项内容
-    func setItem(_ forItem: Int) -> [String: Any?]
+    func setItem(_ forItem: Int) -> (text: String, img: UIImage)
     // 选中
     func didSelectItemAt(_ forItem: Int)
     // 高度
@@ -85,10 +85,8 @@ class DropBoxView: UITableView, UITableViewDelegate, UITableViewDataSource {
     // MARK: 单元格样式，重写这个方法可以定制自己的下拉框卡片
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueReusableCell(withIdentifier: "dropBoxCell", for: indexPath) as? SimpleDropBoxCell
-        let text = dropBoxDelegate.setItem(indexPath.section)["text"] as! String
-        let img = dropBoxDelegate.setItem(indexPath.section)["img"] as! UIImage
-        cell?.setImg(img: img)
-        cell?.setLabel(text: text)
+        cell?.setImg(img: dropBoxDelegate.setItem(indexPath.section).img)
+        cell?.setLabel(text: dropBoxDelegate.setItem(indexPath.section).text)
         return cell!
     }
     

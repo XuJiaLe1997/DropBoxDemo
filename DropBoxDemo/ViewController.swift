@@ -27,8 +27,8 @@ class ViewController: UIViewController, DropBoxDelegate {
         return strs.count
     }
     
-    func setItem(_ forItem: Int) -> [String: Any?] {
-        return ["text": strs[forItem], "img": UIImage(named: "user")]
+    func setItem(_ forItem: Int) -> (text: String, img: UIImage) {
+        return (text: strs[forItem], img: UIImage(named: "user")!)
     }
     
     func didSelectItemAt(_ forItem: Int) {
@@ -71,16 +71,16 @@ class ViewController: UIViewController, DropBoxDelegate {
         textField2.layer.addSublayer(border)
         textField2.layer.masksToBounds = true
         
-        let items = [["text":"第一个item", "img": UIImage(named: "user")],
-                     ["text":"第二个item", "img": UIImage(named: "user")],
-                     ["text":"第三个item", "img": UIImage(named: "user")],
-                     ["text":"第四个item", "img": UIImage(named: "user")],
-                     ["text":"第五个item", "img": UIImage(named: "user")],
-                     ["text":"第六个item", "img": UIImage(named: "user")],
-                     ["text":"第七个item", "img": UIImage(named: "user")]]
+        let items = [(text:"第一个item", img: UIImage(named: "user")!),
+                     (text:"第二个item", img: UIImage(named: "user")!),
+                     (text:"第三个item", img: UIImage(named: "user")!),
+                     (text:"第四个item", img: UIImage(named: "user")!),
+                     (text:"第五个item", img: UIImage(named: "user")!),
+                     (text:"第六个item", img: UIImage(named: "user")!),
+                     (text:"第七个item", img: UIImage(named: "user")!)]
         let delegate = DropBoxDelegateImpl(items, { forItem in
             // 选中值赋给文本框
-            self.textField2.text = items[forItem]["text"] as? String
+            self.textField2.text = items[forItem].text
         })
         
         let dropBoxTextField2 = DropBoxTextField(textField: textField2, delegate: delegate)
@@ -90,10 +90,9 @@ class ViewController: UIViewController, DropBoxDelegate {
     // MARK: 下拉菜单样例
     
     func setMenu() {
-        let items = [["text":"刷新", "img": UIImage(named: "reflesh")],
-                     ["text":"分享", "img": UIImage(named: "share")],
-                     ["text":"浏览器打开", "img": UIImage(named: "broswer")]
-        ]
+        let items = [(text: "刷新", img: UIImage(named: "reflesh")!),
+                     (text:"分享", img: UIImage(named: "share")!),
+                     (text:"浏览器打开", img: UIImage(named: "broswer")!)]
         let delegate = DropBoxDelegateImpl(items, { forItem in
             // TODO 本例没有添加菜单的点击事件
         })
@@ -118,11 +117,11 @@ class ViewController: UIViewController, DropBoxDelegate {
 // MARK: 不直接在 Controller 实现 DropBoxDelegate，将其委托给其它实现类
 class DropBoxDelegateImpl : NSObject, DropBoxDelegate{
     
-    var items: [[String : Any?]]!
+    var items: [(text: String, img: UIImage)]!
     var didSelect: (Int) -> Void
     var height: CGFloat
     
-    init(_ items: [[String : Any?]], _ didSelect: @escaping (Int) -> Void, height: CGFloat = 40) {
+    init(_ items: [(text: String, img: UIImage)], _ didSelect: @escaping (Int) -> Void, height: CGFloat = 40) {
         self.items = items
         self.didSelect = didSelect
         self.height = height
@@ -132,8 +131,8 @@ class DropBoxDelegateImpl : NSObject, DropBoxDelegate{
         return items.count
     }
     
-    func setItem(_ forItem: Int) -> [String : Any?] {
-        return items[forItem]
+    func setItem(_ forItem: Int) -> (text: String, img: UIImage) {
+        return (text: items[forItem].text, img: items[forItem].img)
     }
     
     func didSelectItemAt(_ forItem: Int) {

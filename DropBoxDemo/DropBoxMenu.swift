@@ -35,10 +35,8 @@ class DropBoxMenu: DropBoxView {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MenuCell
-        let text = dropBoxDelegate.setItem(indexPath.row)["text"] as! String
-        let img = dropBoxDelegate.setItem(indexPath.row)["img"] as! UIImage
-        cell?.setImg(img: img)
-        cell?.setLabel(text: text)
+        cell?.setImg(img: dropBoxDelegate.setItem(indexPath.row).img)
+        cell?.setLabel(text: dropBoxDelegate.setItem(indexPath.row).text)
         return cell!
     }
     
