@@ -45,7 +45,8 @@ class DropBoxMenu: DropBoxView {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        return dropBoxDelegate.didSelectItemAt(indexPath.row)
+        dropBoxDelegate.didSelectItemAt(indexPath.row)
+        self.drawUp()
     }
     
     // 计算实际内容高度，本例为 item个数 * item高度 + header高度 + footer高度
