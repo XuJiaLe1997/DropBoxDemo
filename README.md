@@ -4,14 +4,7 @@
 
 以`TableView`为基础，提供一个可以灵活地实现文本输入选择、菜单选择的下拉框。
 
-<p>
-    <img src="img/演示1.gif" alt="Sample"  width="200" height="400"/>
-    <img src="img/演示2.gif" alt="Sample"  width="200" height="400"/>
-</p>
-
-第一张是本例提供的Demo效果。
-
-第二张效果图来源于我们开源的一个课程作业项目，有兴趣的同学可以到[BookShopIOS](https://github.com/XuJiaLe1997/BookShopIOS])这个仓库参考一下，可以直接运行，不需要服务器。
+![](img/演示1.gif)
 
 ## II 使用
 
