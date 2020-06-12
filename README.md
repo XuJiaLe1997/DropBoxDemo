@@ -9,7 +9,7 @@
     <img src="img/演示2.gif" alt="Sample"  width="200" height="400"/>
 </p>
 
-第一张是本例提供的Demo效果，展示了从StoryBoard直接拖拽`TextField`、通过代码添加`TextField`和结合菜单键实现下拉菜单的三种效果。
+第一张是本例提供的Demo效果。
 
 第二张效果图来源于我们开源的一个课程作业项目，有兴趣的同学可以到[BookShopIOS](https://github.com/XuJiaLe1997/BookShopIOS])这个仓库参考一下，可以直接运行，不需要服务器。
 
@@ -28,42 +28,16 @@ self.view.addSubview(textField)
 
 只需要做如下的修改就能很好地兼容上面的代码：
 ```
-let textField = UITextField(frame: ...)
+let textField = UITextField()
 // 省略一些代码
-let dropBoxTextField = DropBoxTextField(textField: textField, delegate: self)
+let dropBoxTextField = DropBoxTextField(frame:..., textField: textField)
 self.view.addSubview(dropBoxTextField)
 ```
 就像装饰者模式一样，我们为你的`TextField`增加了下拉框的功能，你之前对它的一切定制仍然生效，也许会有一些布局上的影响，但相信你能很好地解决，这难不倒你。
 
-我们支持你的`TextField`从StoryBoard中直接拖拽，但注意不要直接在StoryBoard添加约束，这会影响到我们装饰它。实际上，直接拖拽文本框并不是一种很好的做法，我们建议你使用代码的方式。
-
-#### 支持下拉菜单
-
-如果你希望实现一个下拉菜单，这也是一种不错的选择，在我们提供的Demo中就有类似的例子。我们提供了`DropBoxMenu`。
-
-首先，设置下拉菜单在右上角：
-```
-let topRight = CGRect(...)
-menu = DropBoxMenu(frame: topRight, delegate: self)
-view.addSubview(menu)
-```
-
-然后，为菜单按钮添加下拉/收回的点击事件：
-```
-@IBAction func click(_ sender: Any) {
-    if(menu.isDrop) {
-        menu.drawUp()
-    } else {
-        menu.dropDwon()
-    }
-}
-```
-
-这样，一个简单的菜单下拉框就完成了。
-
 ## III 可能存在的问题
 
-为什么我展开后的下拉框被挡住了？
+为什么我展开后的下拉框被挡住了？()
 
 答：这种情况是常有的，因为下拉框添加到父识图时可能位于其他子识图的下层。你可以为可能展开的下拉框预留一些空间，如果不能，你可以在父view调用`bringSubviewToFront(UIView)`让下拉框始终保持在最前面。
 
