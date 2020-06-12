@@ -12,9 +12,7 @@
 		A2688CA023CAD98100D1C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2688C9E23CAD98100D1C4E0 /* Main.storyboard */; };
 		A2688CA223CAD98200D1C4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2688CA123CAD98200D1C4E0 /* Assets.xcassets */; };
 		A2688CA523CAD98200D1C4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2688CA323CAD98200D1C4E0 /* LaunchScreen.storyboard */; };
-		A2688CAD23CAD9CC00D1C4E0 /* DropBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2688CAC23CAD9CC00D1C4E0 /* DropBox.swift */; };
-		A2688CAF23CB26B900D1C4E0 /* DropBoxTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2688CAE23CB26B900D1C4E0 /* DropBoxTextField.swift */; };
-		A2F98C6923CF6C6E0061BED4 /* DropBoxMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F98C6823CF6C6E0061BED4 /* DropBoxMenu.swift */; };
+		A2688CAD23CAD9CC00D1C4E0 /* DropBoxTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2688CAC23CAD9CC00D1C4E0 /* DropBoxTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +23,7 @@
 		A2688CA123CAD98200D1C4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2688CA423CAD98200D1C4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2688CA623CAD98200D1C4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2688CAC23CAD9CC00D1C4E0 /* DropBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBox.swift; sourceTree = "<group>"; };
-		A2688CAE23CB26B900D1C4E0 /* DropBoxTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxTextField.swift; sourceTree = "<group>"; };
-		A2F98C6823CF6C6E0061BED4 /* DropBoxMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBoxMenu.swift; sourceTree = "<group>"; };
+		A2688CAC23CAD9CC00D1C4E0 /* DropBoxTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBoxTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A226DAA32412A0C400C2B786 /* DropBox */ = {
+			isa = PBXGroup;
+			children = (
+				A2688CAC23CAD9CC00D1C4E0 /* DropBoxTextField.swift */,
+			);
+			path = DropBox;
+			sourceTree = "<group>";
+		};
 		A2688C8E23CAD98100D1C4E0 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +64,7 @@
 		A2688C9923CAD98100D1C4E0 /* DropBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A2F98C6823CF6C6E0061BED4 /* DropBoxMenu.swift */,
-				A2688CAC23CAD9CC00D1C4E0 /* DropBox.swift */,
-				A2688CAE23CB26B900D1C4E0 /* DropBoxTextField.swift */,
+				A226DAA32412A0C400C2B786 /* DropBox */,
 				A2688C9A23CAD98100D1C4E0 /* AppDelegate.swift */,
 				A2688C9C23CAD98100D1C4E0 /* ViewController.swift */,
 				A2688C9E23CAD98100D1C4E0 /* Main.storyboard */,
@@ -144,9 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2688CAF23CB26B900D1C4E0 /* DropBoxTextField.swift in Sources */,
-				A2688CAD23CAD9CC00D1C4E0 /* DropBox.swift in Sources */,
-				A2F98C6923CF6C6E0061BED4 /* DropBoxMenu.swift in Sources */,
+				A2688CAD23CAD9CC00D1C4E0 /* DropBoxTextField.swift in Sources */,
 				A2688C9D23CAD98100D1C4E0 /* ViewController.swift in Sources */,
 				A2688C9B23CAD98100D1C4E0 /* AppDelegate.swift in Sources */,
 			);
@@ -295,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4VH2JPNV7;
 				INFOPLIST_FILE = DropBoxDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4VH2JPNV7;
 				INFOPLIST_FILE = DropBoxDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
