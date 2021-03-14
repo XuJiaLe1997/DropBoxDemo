@@ -30,9 +30,9 @@ self.view.addSubview(dropBoxTextField)
 
 ## III 可能存在的问题
 
-为什么我展开后的下拉框被挡住了？()
+为什么我展开后的下拉框被挡住了？
 
-答：这种情况是常有的，因为下拉框添加到父识图时可能位于其他子识图的下层。你可以为可能展开的下拉框预留一些空间，如果不能，你可以在父view调用`bringSubviewToFront(UIView)`让下拉框始终保持在最前面。
+答：这种情况是常有的，因为下拉框 `DropBoxTextField` 添加到父View时可能位于其他子View的下层。你可以为可能展开的下拉框预留一些空间，如果不能，你可以在父view调用`bringSubviewToFront(UIView)`让下拉框始终保持在最前面。
 
 ## IV 其他
 
